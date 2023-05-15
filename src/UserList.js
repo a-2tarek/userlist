@@ -10,13 +10,16 @@ export default function UserList () {
         useEffect(() =>{
             fetchUsers()
         }, [])
-        
+
         return (
-            <ul>
-            {users.map((user)=>
-                <li key={user.id}>{user.name}</li>
-        )}
-        </ul>
+            <div className='users-list'>
+                <h1>The UsersList</h1>
+                <ul >
+                    {users.map((user)=>
+                    <li key={user.id}>userName: {user.name}</li>
+                )}
+                </ul>
+            </div>
         )
    
 } 
